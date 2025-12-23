@@ -1,1 +1,118 @@
+/* Root color variables */
+:root {
+    --primary: #4b0082;  /* deep purple */
+    --accent: #d4af37;   /* gold */
+    --text: #222;
+    --bg: #fff;
+    --card-bg: #faf5ff;  /* light purple/white */
+    --border: #d1c4e9;  /* subtle purple border */
+}
 
+/* Reset & global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header / Hero */
+header.hero {
+    background: var(--primary);
+    color: var(--bg);
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header .logo {
+    max-width: 140px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--bg);
+}
+
+header p {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Sections */
+.intro,
+.products,
+.contact {
+    margin: 2rem 0;
+}
+
+/* Products Grid */
+.products .grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 calc(33% - 1rem);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    text-align: center;
+    background: var(--card-bg);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.card p {
+    color: var(--text);
+}
+
+/* Contact */
+.contact a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: var(--accent);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary);
+    color: var(--bg);
+    border-top: 1px solid var(--accent);
+}
